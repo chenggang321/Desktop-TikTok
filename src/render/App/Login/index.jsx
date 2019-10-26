@@ -24,7 +24,7 @@ class App extends React.PureComponent {
     if (result.code === 0 || result.code === 1) {
       alert(result.data);
       localStorage.setItem('username', this.username);
-      ipcRenderer.send('Enter-Home', { width: 800, height: 600 });
+      ipcRenderer.send('Enter-Home', { width: 1200, height: 750 });
       this.username = '';
       this.password = '';
     } else {
@@ -67,11 +67,11 @@ class App extends React.PureComponent {
           </div>
           <div>
             <label>
-              <input type="checkbox" name="1" />
+              <input type="checkbox" name="1" class="tui-checkbox" />
               <span>记住密码</span>
             </label>
             <label>
-              <input type="checkbox" name="1" />
+              <input type="checkbox" name="1" class="tui-checkbox" />
               <span>自动登录</span>
             </label>
           </div>
